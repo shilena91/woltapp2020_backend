@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    restaurants_search.py                              :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+         #
+#    By: HoangPham <HoangPham@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 16:30:49 by hopham            #+#    #+#              #
-#    Updated: 2020/02/04 16:54:52 by hopham           ###   ########.fr        #
+#    Updated: 2020/02/08 18:36:39 by HoangPham        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,11 @@ def show():
 		data = json.load(f)
 		for res in data["restaurants"]:
 			if q in res['name'] or q in res['tags'] or q in res['description']:
+				res_pos = res['location']
+				res_dis = distance(res_pos, destination)
+				if res_dis < 3:
+					restaurants.append(res)
+			elif len(q) == 0:
 				res_pos = res['location']
 				res_dis = distance(res_pos, destination)
 				if res_dis < 3:
