@@ -12,9 +12,9 @@ Run file **_restaurants_search.py_** in terminal:
 > python3 restaurants_search.py
 
 Go to any web browser and run following:
-> localhost:5000/restaurants/search?q=query_string&lat=latitude&lon=longtitude
+> localhost:5000/restaurants/search?q=query_string&lat=latitude&lon=longitude
 
-Replace _query_string_ as string you want to search, _latitude_ and _longtitude_ as customer's coordinates. It should show a list of restaurants match the string and closer than 3km.
+Replace _query_string_ as string you want to search, _latitude_ and _longitude_ as customer's coordinates. It should show a list of restaurants match the string and closer than 3km.
 
 ## How I come to the solution
 After learning python basics, I started searching on google "create API in python". Most searching results were Flask. That's how I came up with Flask. I still do not have deep knowledge about web development, API and related stuffs.
